@@ -89,6 +89,10 @@ class CoreDataObservable<T: Stored, U: NSManagedObject>: RequestObservable<T> {
         }
     }
     
+    override func stopObserve() {
+        observer = nil
+    }
+    
 }
 
 /// A separate class to avoid inherintace from NSObject

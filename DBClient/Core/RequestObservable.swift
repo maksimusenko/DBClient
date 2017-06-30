@@ -48,4 +48,8 @@ public class RequestObservable<T: Stored> {
         assertionFailure("The observe method must be overriden")
     }
     
+    public func stopObserve() {
+        assertionFailure("The observe method must be overriden")
+    }
+    
 }
