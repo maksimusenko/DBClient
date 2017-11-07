@@ -196,7 +196,7 @@ internal extension FetchRequest {
     func applyTo<T: Object>(realmObjects: Results<T>) -> Results<T> {
         var objects: Results<T> = realmObjects
         if let sortDescriptor = sortDescriptor, let key = sortDescriptor.key {
-            objects = realmObjects.sorted(byProperty: key, ascending: sortDescriptor.ascending)
+            objects = realmObjects.sorted(byKeyPath: key, ascending: sortDescriptor.ascending)
         }
         if let predicate = predicate {
             objects = objects.filter(predicate)
